@@ -30,7 +30,10 @@ public class ConversionListToMap_KB {
         userList.add(user3);
 
         Map<String, User> usersByEmail = convertInShortWay(userList);
-        usersByEmail.forEach((email, user) -> logger.debug("e-mail: {}, user: {}", email, user));
+        usersByEmail.forEach((email, user) ->
+                                     logger.debug("e-mail: {}, user: {}",
+                                                  email,
+                                                  user));
 
         boolean isPresent = containsOnce(userList, new User(777, "name-777", "email-777"));
         logger.info("isPresent = {}", isPresent); // false
@@ -40,7 +43,9 @@ public class ConversionListToMap_KB {
     }
 
     public static Map<String, User> convertInShortWay(List<User> list) {
-        return list.stream().collect(Collectors.toMap(User::getEmail, user -> user));
+        return list.stream()
+                   .collect(Collectors.toMap(User::getEmail,
+                                             user -> user));
     }
 
     public static Map<String, User> convertInLongWay(List<User> list) {
@@ -50,6 +55,8 @@ public class ConversionListToMap_KB {
     }
 
     public static boolean containsOnce(List<User> list, User user) {
-        return list.stream().filter(u -> u.equals(user)).count() == 1;
+        return list.stream()
+                   .filter(u -> u.equals(user))
+                   .count() == 1;
     }
 }
