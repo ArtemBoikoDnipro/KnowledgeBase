@@ -11,12 +11,12 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * // TODO add some description
+ * List to Map conversion.
  *
  * @author Artem Boiko
  */
-public class DataConversion_KB {
-    private static final Logger logger = LogManager.getLogger(DataConversion_KB.class);
+public class ConversionListToMap_KB {
+    private static final Logger logger = LogManager.getLogger(ConversionListToMap_KB.class);
 
     public static void main(String[] args) {
         List<User> userList = new ArrayList<>();
@@ -30,10 +30,13 @@ public class DataConversion_KB {
         userList.add(user3);
 
         Map<String, User> usersByEmail = convertInShortWay(userList);
-        usersByEmail.forEach((email, user) -> logger.debug("e-mail = " + email + "user = " + user));
+        usersByEmail.forEach((email, user) -> logger.debug("e-mail: {}, user: {}", email, user));
 
-        boolean isPresent = containsOnce(userList, new User(1, "name-1", "email-1"));
-        logger.debug("isPresent = {}", isPresent);
+        boolean isPresent = containsOnce(userList, new User(777, "name-777", "email-777"));
+        logger.info("isPresent = {}", isPresent); // false
+
+        isPresent = containsOnce(userList, user1);
+        logger.info("isPresent = {}", isPresent); // true
     }
 
     public static Map<String, User> convertInShortWay(List<User> list) {
