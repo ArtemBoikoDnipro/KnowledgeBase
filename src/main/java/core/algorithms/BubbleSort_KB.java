@@ -1,12 +1,9 @@
 package core.algorithms;
 
-import core.lambdas.VarargsConsumer;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.Arrays;
-
-import static logging.Logging_KB.getConsumer;
 
 /**
  * Bubble Sort algorithm.
@@ -16,20 +13,19 @@ import static logging.Logging_KB.getConsumer;
  * @author Artem Boiko
  */
 public class BubbleSort_KB {
-    private static final VarargsConsumer<String, String> log = getConsumer(BubbleSort_KB.class);
     private static final Logger logger = LogManager.getLogger(BubbleSort_KB.class);
 
     public static void main(String[] args) {
         Integer[] array = {5, 2, 4, 6, 1};
-        log.accept("before", Arrays.toString(array));
+        logger.debug("before = {}", Arrays.toString(array));
+
         bubbleSort(array);
-        log.accept("sorted", Arrays.toString(array));
+        logger.debug("sorted = {}", Arrays.toString(array));
     }
 
     public static void bubbleSort(Integer[] array) {
         for (int j = 0; j < array.length; j++) {
             logger.debug("Outer iteration");
-            log.accept("Outer iteration");
             for (int i = 0; i < array.length - j - 1; i++) {
                 logger.debug("Inner iteration");
                 Integer temp = array[i];
