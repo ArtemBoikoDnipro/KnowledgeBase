@@ -17,6 +17,7 @@ public class InsertionSort_KB {
     public static void main(String[] args) {
         int[] array = {5, 2, 4, 6, 1};
         logger.debug("before = {}", Arrays.toString(array));
+
         insertionSort(array);
         logger.debug("sorted = {}", Arrays.toString(array));
     }
