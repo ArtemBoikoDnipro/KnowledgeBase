@@ -3,14 +3,17 @@ package core.entity;
 import java.util.StringJoiner;
 
 /**
- * // TODO add some description
+ * User entity.
  *
  * @author Artem Boiko
  */
 public class User {
-    int id;
-    String name;
-    String email;
+    private int id;
+    private String name;
+    private String email;
+
+    public User() {
+    }
 
     public User(int id, String name, String email) {
         this.id = id;
