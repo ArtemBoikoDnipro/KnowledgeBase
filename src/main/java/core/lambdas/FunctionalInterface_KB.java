@@ -3,7 +3,7 @@ package core.lambdas;
 import java.util.function.*;
 
 /**
- * // TODO add some description
+ * Functional interfaces.
  *
  * @author Artem Boiko
  */
