@@ -9,7 +9,6 @@ import java.util.function.*;
  */
 public class FunctionalInterface_KB {
     public static void main(String[] args) {
-
         Integer integer = 111;
         Consumer<Integer> integerConsumer = i -> System.out.println("integer in consumer = " + i);
         integerConsumer.accept(integer);
