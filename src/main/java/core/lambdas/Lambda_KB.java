@@ -13,7 +13,7 @@ import java.util.function.Consumer;
  * @author Artem Boiko
  */
 public class Lambda_KB {
-    private static final Logger logger = LogManager.getLogger(ConversionListToMap_KB.class);
+    private static final Logger logger = LogManager.getLogger(Lambda_KB.class);
 
     public static void main(String[] args) {
         Consumer<String> stringConsumer = getAnonymousConsumer();
