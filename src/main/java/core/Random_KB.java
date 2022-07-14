@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * // TODO add some description
+ * Random numbers.
  *
  * @author Artem Boiko
  */
