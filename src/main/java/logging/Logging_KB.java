@@ -1,7 +1,6 @@
 package logging;
 
 import core.encoding.Encoding_KB;
-import core.lambdas.VarargsConsumer;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,7 +18,7 @@ public class Logging_KB {
     public static BiConsumer<String, String> log = (message, obj) ->
             LogManager.getLogger().debug("{} = {}", message, obj);
 
-    public static VarargsConsumer<String, String> getConsumer(Class<?> clazz) {
+    public static BiConsumer<String, String> getConsumer(Class<?> clazz) {
         return (message, obj) -> LogManager.getLogger(clazz).debug("{} = {}", message, obj);
     }
 
