@@ -1,9 +1,9 @@
-package core;
+package core.algorithms;
 
 import java.util.Arrays;
 
 /**
- * // TODO add some description
+ * Algorithm for printing data.
  *
  * @author Artem Boiko
  */
