@@ -1,13 +1,12 @@
 package core;
 
 /**
- * // TODO add some description
+ * StackOverFlowError provoke.
  *
  * @author Artem Boiko
  */
 public class StackOverFlowError_KB {
     public static void main(String[] args) {
-        int[] aaa = new int[]{1, 2, 3};
         doNotCallThisMethod(10);
     }
 
