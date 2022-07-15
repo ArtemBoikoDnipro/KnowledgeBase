@@ -1,12 +1,12 @@
 package databases;
 
 /**
- * // TODO add some description
+ * MySQL.
  *
  * @author Artem Boiko
  */
 public class MySQL_KB {
     public static void main(String[] args) {
-        String connectionURL="jdbc:mysql://localhost/provider?user=root&password=1111&allowMultiQueries=true";
+        String connectionURL = "jdbc:mysql://localhost/provider?user=root&password=1111&allowMultiQueries=true";
     }
 }
