@@ -3,7 +3,7 @@ package crypt;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 /**
- * // TODO add some description
+ * BCrypt.
  *
  * @author Artem Boiko
  */
