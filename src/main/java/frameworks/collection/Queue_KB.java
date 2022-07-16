@@ -3,11 +3,11 @@ package frameworks.collection;
 import java.util.Queue;
 
 /**
- * // TODO add some description
+ * Queue.
  *
  * @author Artem Boiko
  */
-public class MyQueue {
+public class Queue_KB {
     /**
      * A collection designed for holding elements prior to processing.
      * <p>
@@ -19,33 +19,33 @@ public class MyQueue {
      * The latter form of the insert operation is designed specifically <br>
      * for use with capacity-restricted {@code Queue} implementations; <br>
      * in most implementations, insert operations cannot fail.
-     *<p>
+     * <p>
      * <table BORDER CELLPADDING=3 CELLSPACING=1>
      * <caption>Queue methods</caption>
-     *  <tr>
-     *    <td></td>
-     *    <td ALIGN=CENTER><em>Throws exception</em></td>
-     *    <td ALIGN=CENTER><em>|</em></td>
-     *    <td ALIGN=CENTER><em>Returns special value</em></td>
-     *  </tr>
-     *  <tr>
-     *    <td><b>Insert</b></td>
-     *    <td>{@link Queue#add add(e)}</td>
-     *    <td>|</td>
-     *    <td>{@link Queue#offer offer(e)}</td>
-     *  </tr>
-     *  <tr>
-     *    <td><b>Remove</b></td>
-     *    <td>{@link Queue#remove remove()}</td>
-     *    <td>|</td>
-     *    <td>{@link Queue#poll poll()}</td>
-     *  </tr>
-     *  <tr>
-     *    <td><b>Examine</b></td>
-     *    <td>{@link Queue#element element()}</td>
-     *    <td>|</td>
-     *    <td>{@link Queue#peek peek()}</td>
-     *  </tr>
+     * <tr>
+     * <td></td>
+     * <td ALIGN=CENTER><em>Throws exception</em></td>
+     * <td ALIGN=CENTER><em>|</em></td>
+     * <td ALIGN=CENTER><em>Returns special value</em></td>
+     * </tr>
+     * <tr>
+     * <td><b>Insert</b></td>
+     * <td>{@link Queue#add add(e)}</td>
+     * <td>|</td>
+     * <td>{@link Queue#offer offer(e)}</td>
+     * </tr>
+     * <tr>
+     * <td><b>Remove</b></td>
+     * <td>{@link Queue#remove remove()}</td>
+     * <td>|</td>
+     * <td>{@link Queue#poll poll()}</td>
+     * </tr>
+     * <tr>
+     * <td><b>Examine</b></td>
+     * <td>{@link Queue#element element()}</td>
+     * <td>|</td>
+     * <td>{@link Queue#peek peek()}</td>
+     * </tr>
      * </table>
      */
     Queue<?> queue;
@@ -59,7 +59,5 @@ public class MyQueue {
          *  Remove        E remove();  |        E poll();
          * Examine        E element(); |        E peek();
          */
-
-
     }
 }
