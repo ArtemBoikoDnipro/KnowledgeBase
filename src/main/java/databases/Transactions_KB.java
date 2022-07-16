@@ -1,13 +1,13 @@
 package databases;
 
 /**
- * // TODO add some description
+ * Transactions.
  *
  * @author Artem Boiko
  */
 public class Transactions_KB {
     public static void main(String[] args) {
-        /**
+        /*
          * optimistic locking
          *
          *         try {
@@ -36,7 +36,5 @@ public class Transactions_KB {
          *
          *
          */
-
-
     }
 }
