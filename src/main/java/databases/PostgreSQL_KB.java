@@ -1,7 +1,7 @@
 package databases;
 
 /**
- * // TODO add some description
+ * PostgreSQL.
  *
  * @author Artem Boiko
  */
