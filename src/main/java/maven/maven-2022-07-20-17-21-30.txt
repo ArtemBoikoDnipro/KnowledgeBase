@@ -1,0 +1,43 @@
++04 - Download, install, configure [1] (2022-07-20) {t 6-04}
+
+00-00...02-54
+
+загружаем binary zip:
+https://maven.apache.org/download.cgi
+
+установка не нужна, распаковываем, и указываем системе путь к maven
+
+не использовать пути с пробелами (Program files - плохой выбор)
+
+1) проверяем, что у нас задана переменная среды JAVA_HOME
+
+2) создаём переменную среды MAVEN_HOME
+
+3) добавляем %MAVEN_HOME%\bin в PATH
+
+
+
+
+
+
+
+
+02-54...до конца
+
+Start
+environment variables
+JAVA_HOME должна указывать на jdk, а не на jre
+
+создаём MAVEN_HOME
+C:\java\maven383
+
+добавляем в Path
+%MAVEN_HOME%\bin
+
+%SOMETHING% - проценты обрамляют ссылку на что-то
+
+проверяем
+git bash
+where java
+where mvn
+mvn --version
