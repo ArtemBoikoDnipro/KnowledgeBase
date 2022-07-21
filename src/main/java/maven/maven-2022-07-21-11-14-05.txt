@@ -1,4 +1,4 @@
-+05 - Create project & import in IDE {t 6-49} [in KB maven-2022-07-21-11-14-05]
++05 - Create project & import in IDE {t 6-49} [in-KB maven-2022-07-21-11-14-05]
 
 00-00...03-34
 

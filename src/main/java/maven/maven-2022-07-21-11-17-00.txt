@@ -1,0 +1,62 @@
++07 - Dependency management {t 5-12} [in-KB maven-2022-07-21-11-17-00]
+
+00-00...01-07
+
+в xml ноде dependencies находятся те библиотеки, которые не идут из коробки с jdk
+
+  <dependencies>
+    <dependency>
+      <groupId>...</groupId>
+      <artifactId>...</artifactId>
+      <version>...</version>
+      <scope>...</scope>
+    </dependency>
+  </dependencies>
+
+https://mvnrepository.com/
+ищем зависимости здесь
+
+хотя он ищет через
+https://search.maven.org
+но там не удобный интерыейс
+
+
+
+
+
+
+
+
+01-07...до конца
+
+enable auto-import
+при первой загрузке зависимости в idea
+
+библиотеки попадают в
+C:\Users\art\.m2\repository
+
+.m2 - потому что так была названа директория в то время, когда maven был 2-й версии, хотя сейчас версия 3, но папка так и называется .m2
+
+например spring boot лежит в
+C:\Users\art\.m2\repository\org\springframework\boot\spring-boot
+
+если в папке .m2 maven находит бибилиотеку, то он не идёт её повторно скачивать, он берёт ранее скачанную локальную версию
+
+если возникают проблемы с maven - просто удаляем локальную юиюлиотеку, mvan переподтянет по новой и часто это решает проблему
+
+
+
+
+
+
+
+
+всё
+----------
+
+
+
+
+
+
+
