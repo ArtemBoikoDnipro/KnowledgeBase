@@ -1,0 +1,71 @@
++05 - Create project & import in IDE {t 6-49} [in KB maven-2022-07-21-11-14-05]
+
+00-00...03-34
+
+Для корректной работы рекомендуем использовать новую версию архетипа: -DarchetypeVersion=1.4
+
+git bash
+cd /E/a/dev/java/epam/eLearn/Maven/dir
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+
+groupdId: (группа проекта)
+com.product
+
+artifactId: (это название проекта)
+product-for-people (не используем camelCase, разделение дефисом)
+
+version
+Enter (оставляем ту, что предлагают)
+
+package
+com.product (часто совпадает с groupId)
+
+y
+
+сгенерировались pom.xml и директория src
+
+
+
+
+
+
+
+03-34...до конца
+
+idea
+File
+Settings
+Build
+Build tools
+maven
+
+внутри idea уже есть встроенный maven из коробки, поэтому перезаписываем путь к maven
+
+Maven home path:
+C:\java\maven383
+
+New
+Project form existing source
+import from module
+
+cd /E/a/dev/java/epam/eLearn/Maven/dir/product-for-people
+mvn compile
+mvn test
+mvn compile exec:java -Dexec.mainClass='com.product.App'
+
+
+
+
+
+
+
+
+всё
+----------
+
+
+
+
+
+
+

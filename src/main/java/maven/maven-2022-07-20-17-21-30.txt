@@ -41,3 +41,20 @@ git bash
 where java
 where mvn
 mvn --version
+
+
+
+
+
+
+
+
+всё
+----------
+
+
+
+
+
+
+
