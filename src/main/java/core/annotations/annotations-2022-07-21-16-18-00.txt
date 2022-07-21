@@ -1,0 +1,114 @@
++02-1 Найважливіше Про Аннотації в Java {t 16-29} [in-KB annotations-2022-07-21-16-18-00]
+
+https://www.youtube.com/watch?v=KF1H2EOCdD4
+
+
+
+
+
+
+
+
+04-05...05-50
+
+аннотации сами по себе ничего не делают
+
+это добавление информации к коду
+
+аннотации работают в паре с инструментом, который их использует
+
+некторые аннотации нужны компилятору:
+@Override
+@FunctionalInterface
+@SupressWarnings
+@Deprecated
+
+@FunctionalInterface
+компилятор во время компиляции проверяет
+один ли абсрактный метод в интерфейсе
+
+Lombok генерирует код
+
+@Getter
+@Setter
+@Builder
+@ToString
+@AllArgsConstructor
+
+
+
+
+
+
+
+
+05-55...09-32
+
+public @interface AnnotationName {}
+
+Strring value();
+
+@Retention(RetentionPolicy.***)
+указываем на каком этапе будет видна аннотация
+
+RetentionPolicy.SOURCE
+видна только в исходном коде,
+во время компиляции она отбрасывается
+
+RetentionPolicy.CLASS
+видна в исходном коде,
+сохраняется после компиляции,
+но её не видно в рантайме
+
+RetentionPolicy.RUNTIME
+видна даже в рантайме
+
+если не указать, то по умолчанию CLASS (оговорился)
+
+
+
+
+
+
+
+
+09-40...15-04
+
+@Target(ElementType.***)
+куда можно применять аннотацию
+
+ElementType.TYPE
+аннотация применяема к типу
+
+методы интерфейса становятся атрибутами аннотации
+
+String complexityLevel() default "easy";
+
+.getClass().getDeclaredAnnotations();
+
+.getDeclaredAnnotation(SpecificAnnotation.class)
+вытащить определённую аннотацию
+
+можем вызвать у аннотации методы:
+annotation.value();
+
+рефлексивные фреймворки Spring и Hibernate сканируют код на предмет аннотаций,
+вытягивают из аннотаций нужные фреймворку значения,
+и на основе этих значений выполняют некую логику, например, конфигурацию
+
+
+
+
+
+
+
+
+всё (coded)
+----------
+
+
+
+
+
+
+
