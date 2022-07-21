@@ -1,6 +1,6 @@
-+02 - Build tool concept [1] (2022-07-20) {t 5-26}
++02 - Build tool concept {t 5-26} [in-KB maven-2022-07-20-17-17-30]
 
-00-00...джо конца
+00-00...до конца
 
 build tool - сборщик
 
