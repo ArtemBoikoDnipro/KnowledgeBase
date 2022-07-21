@@ -1,0 +1,89 @@
++06 - Build lifecycle {t 5-05} [in KB maven-2022-07-21-11-16-00]
+
+00-00...00-58
+
+сборка проекта состоит из мелких атомарных частей/фаз, которые называются goals
+
+самые популярные:
+mvn clean
+mvn test
+mvn package
+mvn install
+mvn deploy
+
+
+
+
+
+
+
+
+00-58...01-26
+
+mvn clean
+очищает target папку с результатами прошлой сборки
+
+mvn test
+(!!!) компилирует приложение и запускает junit-тесты
+
+mvn package
+упаковывает проект в артифакт (jar/war)
+
+mvn install
+устанавливает проект локально в систему
+
+mvn deploy
+деплоит на некий сервер
+
+
+
+
+
+
+
+
+01-26...03-14
+
+mvn test
+
+maven-compiler-plugin
+maven с помощью этого плагина компилирует приложение
+
+maven-surefire-plugin
+а с помощью этого плагина запускает тесты
+
+maven выполняет работу с помощью плагинов
+
+
+
+
+
+
+
+
+03-16...до конца
+
+mvn clean
+
+target
+директория сборки проекта
+
+mvn install
+install the package into the local repository, for use as a dependency in other projects locally
+
+
+
+
+
+
+
+
+всё
+----------
+
+
+
+
+
+
+
