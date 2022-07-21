@@ -2,11 +2,15 @@
 
 00-00...03-34
 
-Для корректной работы рекомендуем использовать новую версию архетипа: -DarchetypeVersion=1.4
+Для корректной работы рекомендуем
+использовать новую версию архетипа: -DarchetypeVersion=1.4
 
 git bash
 cd /E/a/dev/java/epam/eLearn/Maven/dir
-mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4
+mvn archetype:generate \
+  -DarchetypeGroupId=org.apache.maven.archetypes \
+  -DarchetypeArtifactId=maven-archetype-quickstart \
+  -DarchetypeVersion=1.4
 
 groupdId: (группа проекта)
 com.product
@@ -39,7 +43,8 @@ Build
 Build tools
 maven
 
-внутри idea уже есть встроенный maven из коробки, поэтому перезаписываем путь к maven
+внутри idea уже есть встроенный maven из коробки,
+поэтому перезаписываем путь к maven
 
 Maven home path:
 C:\java\maven383
