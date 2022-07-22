@@ -1,5 +1,8 @@
 package core.algorithms;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Arrays;
 
 /**
@@ -8,6 +11,8 @@ import java.util.Arrays;
  * @author Artem Boiko
  */
 public class PrintFormattedString_KB {
+    private static final Logger logger = LogManager.getLogger(PrintFormattedString_KB.class);
+
     public static void main(String[] args) {
         String[] arg = {"1", "2", "3", "x", "5",
                         "6", "a", "baaaaaaaaaaa", "c", "10",
@@ -22,15 +27,15 @@ public class PrintFormattedString_KB {
         for (int i = 0; i < 5; i++) {
             longestInColumns[i] = getLongestInColumn(args, i);
         }
-        System.out.println("longestInColumns = " + Arrays.toString(longestInColumns));
+        logger.info("longestInColumns = {}", Arrays.toString(longestInColumns));
 
         for (int col = 0; col < args.length; col += 5) {
             for (int i = col; (i < col + 5) && i < args.length; i++) {
-                System.out.print(args[i] + getSpace(longestInColumns[i - col]
-                                                    - args[i].length()
-                                                    + 4));
+                logger.info(args[i] + getSpace(longestInColumns[i - col]
+                                               - args[i].length()
+                                               + 4));
             }
-            System.out.println();
+            logger.info("");
         }
     }
 

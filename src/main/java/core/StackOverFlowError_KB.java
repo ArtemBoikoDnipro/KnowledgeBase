@@ -11,7 +11,6 @@ public class StackOverFlowError_KB {
     }
 
     public static int doNotCallThisMethod(int i) {
-//        doNotCallThisMethod(args);
         return i * doNotCallThisMethod(i - 1);
     }
 }
