@@ -1,6 +1,5 @@
-package core.lambdas;
+package core.interfaces.lambdas;
 
-import collection.ConversionListToMap_KB;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -20,6 +19,8 @@ public class Lambda_KB {
         stringConsumer.accept("The anonymous message");
 
         stringConsumer = getLambdaConsumer();
+        /* при вызове .accept вызывается private static method
+        * поскольку мы использовали лямбду */
         stringConsumer.accept("The lambda message");
 
         Method[] methods = Lambda_KB.class.getDeclaredMethods();
@@ -37,6 +38,17 @@ public class Lambda_KB {
         };
     }
 
+    /**
+     * если меняем вызов анонимного метода на лямбду, то появляется:
+     * private static synthetic lambda$
+     *
+     * когда мы используем лямбду, то компилятор добавляет
+     * приватный статический метод (private static method)
+     *
+     * проверить это можно вызвав на объекте типа Class метод getDeclaredMethods()
+     *
+     * @return consumer object
+     */
     private static Consumer<String> getLambdaConsumer() {
         return s -> logger.info("Message NOT from lambda: {}", s);
     }
