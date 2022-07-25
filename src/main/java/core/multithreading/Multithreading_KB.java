@@ -25,7 +25,7 @@ public class Multithreading_KB {
         logger.info("     State: {}", thread.getState());
 
         thread.start();
-        TimeUnit.SECONDS.sleep(1);
+        TimeUnit.SECONDS.sleep(2);
         logger.info("     State: {}", thread.getState());
     }
 }
