@@ -123,8 +123,11 @@ socket.getInputStream();
 
 bifferedReader.readLine();
 
-socket.getInetAdress().getHostAdress()
+socket.getInetAddress().getHostAddress();
 и будет выводиться хост клиента
+
+InetAddress.getLocalHost().getHostAddress();
+для IP адреса текущего компьютера
 
 
 
@@ -160,7 +163,10 @@ bufferedWriter.flush();
 
 делаем коллекцию айпишников пользователей
 
-clientSocket.getInetAdress().getHostAdress()
+clientSocket.getInetAddress().getHostAddress();
+
+InetAddress.getLocalHost().getHostAddress();
+для IP адреса текущего компьютера
 
 CompletableFuture.runAsync(()->...)
 
